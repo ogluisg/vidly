@@ -8,17 +8,17 @@ const NavBar = ({ totalCounters }) => {
         Vidly
       </Link>
       <button
-      className="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target='#navbarNavtAltMarkup'
-      aria-controls='navbarNavtAltMarkup'
-      aria-expanded='false'
-      aria-label="Toggle navigation"
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavtAltMarkup"
+        aria-controls="navbarNavtAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
-        <span className='navbar-toggler-icon'/>
+        <span className="navbar-toggler-icon" />
       </button>
-      <div className="collapse navbar-collapse" id='navbarNavtAltMarkup'>
+      <div className="collapse navbar-collapse" id="navbarNavtAltMarkup">
         <div className="navbar-nav">
           <NavLink className="nav-item nav-link" to="/movies">
             Movies
@@ -32,10 +32,11 @@ const NavBar = ({ totalCounters }) => {
           <NavLink className="nav-item nav-link " to="/login">
             Login
           </NavLink>
+          <NavLink className="nav-item nav-link " to="/register">
+            Register
+          </NavLink>
         </div>
-
       </div>
-   
     </nav>
   );
 };
