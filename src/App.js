@@ -5,10 +5,10 @@ import MovieForm from "./components/movieForm";
 import NotFound from "./components/notFound";
 import Rentals from "./components/rentals";
 import Customers from "./components/customers";
-import Navbar from "./components/navbar";
+import Navbar from "./components/navBar";
 import LoginForm from "./components/loginForm";
-import "./App.css";
 import RegisterForm from "./components/registerForm";
+import "./App.css";
 
 class App extends Component {
   render() {

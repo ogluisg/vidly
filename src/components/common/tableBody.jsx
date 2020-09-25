@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import Like from "../common/like";
 import _ from "lodash";
 
 class TableBody extends Component {
-  
-    renderCell = (item, column) => {
+  renderCell = (item, column) => {
     if (column.content) return column.content(item);
 
     return _.get(item, column.path);
