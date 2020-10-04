@@ -7,21 +7,32 @@ import Rentals from "./components/rentals";
 import Customers from "./components/customers";
 import Navbar from "./components/navBar";
 import LoginForm from "./components/loginForm";
+import Logout from "./components/logout";
+import auth from "./services/authService";
 import RegisterForm from "./components/registerForm";
 import { ToastContainer } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 
 class App extends Component {
+  state = {};
+
+  componentDidMount() {
+    const user = auth.getCurrentUser();
+    this.setState({ user });
+  }
+
   render() {
     return (
       <React.Fragment>
         <ToastContainer />
-        <Navbar />
+        <Navbar user={this.state.user} />
         <main className="container">
           <Switch>
             <Route path="/movies/:id" component={MovieForm} />
             <Route path="/login" component={LoginForm} />
+            <Route path="/logout" component={Logout} />
             <Route path="/register" component={RegisterForm} />
             <Route path="/movies" component={Movies}></Route>
             <Route path="/customers" component={Customers}></Route>
